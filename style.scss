@@ -1,0 +1,69 @@
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+$slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+
+body{
+    background-color: $very-dark-blue;
+}
+h1{
+    font-size: 3rem;
+}
+main{
+    background-color: $dark-desaturated-blue;
+    width: clamp(75%, 5%, 90%);
+    margin: 10vw auto;
+    position: relative;
+    .pink{
+        color: $soft-violet;
+    }
+}
+.container{
+    width: 50%;
+    padding: 3rem;
+}
+img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+p{
+    font-size: 1.5rem;
+    color: $slightly-transparent-white;
+}
+.info-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 2rem;
+    li{
+        font-size: 2rem;
+        .number{
+            font-size: 1.5rem;
+            font-weight: bold;
+            opacity: 0.5;
+        }
+    }
+}
+//in mobile view, the image is above with height 20%
+@media (max-width: 600px){
+    img{
+        height: 30%;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .container{
+        width: 90%;
+        padding: 1rem;
+        margin-top: 20rem;
+    }
+    main{
+        width: 90%;
+    }
+    .info-grid{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
